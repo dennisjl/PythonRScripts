@@ -25,9 +25,9 @@ def auto_aggro(number_of_hours):
             # plus modificator allows to press more buttons at the same time
             #keyboard.press_and_release("u")    #probably too static
             #keyboard.press_and_release("|+y")  #probably too static
-            keyboard.press("u")
+            keyboard.press("d")
             time.sleep(random_keystroke_float)
-            keyboard.release("u")
+            keyboard.release("d")
 
             keyboard.press("|")
             keyboard.press("y")
