@@ -9,4 +9,5 @@ Utilize the following python libraries:
 
 Pre-requisits: on Runescape:
 * have one of the targetcycle abilities in settings set to "|" https://imgur.com/a/Sbx339x
-* have a ability keybounded to "y"
+* have abilities keybounded to "y", "s" and "t". 
+* Aggresion sigil keybounded to "d" is optional

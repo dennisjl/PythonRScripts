@@ -4,7 +4,8 @@ import random
 
 def auto_aggro(number_of_hours):
     # 3600s i en time. sleep(10) ==> 360 = 1 time
-    number_of_cycles = number_of_hours*360
+    # endret til sleep(5) * 3 ==> 15s. 3600/15 = 240
+    number_of_cycles = number_of_hours*240
     i = 0
 
     print('\n\n ----pre-reqs: '
@@ -14,32 +15,63 @@ def auto_aggro(number_of_hours):
     print("program to start in 2 seconds. Press y to start")
 
     time.sleep(2)
-    keyboard.wait("y")      #press enter to start
+    keyboard.wait("p")      #press p to start
 
     try:
-        while i<number_of_cycles:
-            #generate random numbers
-            random_aprox_10_float = random.uniform(9.5, 10.5)
-            random_keystroke_float = random.uniform(0.2, 0.4)
+        while i < number_of_cycles:
+            #the random generated numbers:
+            d_key_random = random.uniform(0.2, 0.4)
+            y_key_random = random.uniform(0.2, 0.4)
+            s_key_random = random.uniform(0.2, 0.4)
+            t_key_random = random.uniform(0.2, 0.4)
+            first_of_three = random.uniform(4.5, 5.5)
+            second_of_three = random.uniform(4.5, 5.5)
+            third_of_three = random.uniform(4.5, 5.5)
 
-            # plus modificator allows to press more buttons at the same time
-            #keyboard.press_and_release("u")    #probably too static
-            #keyboard.press_and_release("|+y")  #probably too static
+            #Sigil proc
             keyboard.press("d")
-            time.sleep(random_keystroke_float)
+            time.sleep(d_key_random)
             keyboard.release("d")
 
+            #corruption shot
             keyboard.press("|")
             keyboard.press("y")
-            time.sleep(random_keystroke_float)
+            time.sleep(y_key_random)
             keyboard.release("y")
             keyboard.release("|")
 
-            time.sleep(random_aprox_10_float)  #sleep in x-time, with unit in seconds
-            print("delay generert: " + "{:.6f}".format(random_aprox_10_float) +
-                  "\t\t\t keystroke generert: " +
-                  "{:.6f}".format(random_keystroke_float))
+            time.sleep(first_of_three)          # sleep in x time, with unit in seconds
+
+            #chain
+            keyboard.press("|")
+            keyboard.press("s")
+            time.sleep(s_key_random)
+            keyboard.release("s")
+            keyboard.release("|")
+
+            time.sleep(second_of_three)
+
+            #dbreath
+            keyboard.press("|")
+            keyboard.press("t")
+            time.sleep(t_key_random)
+            keyboard.release("t")
+            keyboard.release("|")
+
+            time.sleep(third_of_three)
+
+            print("delay generert: \t"
+                  + "{:.6f}".format(first_of_three) + "\t\t"
+                  + "{:.6f}".format(second_of_three) + "\t\t"
+                  + "{:.6f}".format(third_of_three) + "\t\t"
+                  + "\t\t\t keystroke generert: \t"
+                  + "{:.6f}".format(d_key_random) + "\t\t"
+                  + "{:.6f}".format(y_key_random) + "\t\t"
+                  + "{:.6f}".format(s_key_random) + "\t\t"
+                  + "{:.6f}".format(t_key_random) + "\t\t"
+                  )
             i+=1
+
     except KeyboardInterrupt:
         print("Program exited with CTRL+C")
         pass
