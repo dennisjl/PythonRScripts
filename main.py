@@ -24,9 +24,9 @@ def auto_aggro(number_of_hours):
             y_key_random = random.uniform(0.2, 0.4)
             s_key_random = random.uniform(0.2, 0.4)
             t_key_random = random.uniform(0.2, 0.4)
-            first_of_three = random.uniform(4.5, 5.5)
-            second_of_three = random.uniform(4.5, 5.5)
-            third_of_three = random.uniform(4.5, 5.5)
+            first_of_three = random.uniform(4.5, 5.2)
+            second_of_three = random.uniform(4.5, 5.2)
+            third_of_three = random.uniform(4.5, 5.2)
 
             #Sigil proc
             keyboard.press("d")
@@ -42,7 +42,7 @@ def auto_aggro(number_of_hours):
 
             time.sleep(first_of_three)          # sleep in x time, with unit in seconds
 
-            #chain
+            #10scd ability: chain/dbreath
             keyboard.press("|")
             keyboard.press("s")
             time.sleep(s_key_random)
@@ -51,7 +51,7 @@ def auto_aggro(number_of_hours):
 
             time.sleep(second_of_three)
 
-            #dbreath
+            #10scd ability: chain/dbreath
             keyboard.press("|")
             keyboard.press("t")
             time.sleep(t_key_random)
