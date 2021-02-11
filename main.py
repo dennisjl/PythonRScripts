@@ -61,15 +61,30 @@ def auto_aggro(number_of_hours):
             time.sleep(third_of_three)
 
             print("delay generert: \t"
-                  + "{:.6f}".format(first_of_three) + "\t\t"
-                  + "{:.6f}".format(second_of_three) + "\t\t"
-                  + "{:.6f}".format(third_of_three) + "\t\t"
-                  + "\t\t\t keystroke generert: \t"
-                  + "{:.6f}".format(d_key_random) + "\t\t"
-                  + "{:.6f}".format(y_key_random) + "\t\t"
-                  + "{:.6f}".format(s_key_random) + "\t\t"
-                  + "{:.6f}".format(t_key_random) + "\t\t"
+                  + "{:.6f}".format(first_of_three) + "\t"
+                  + "{:.6f}".format(second_of_three) + "\t"
+                  + "{:.6f}".format(third_of_three) + "\t"
+                  + "\t\t keystroke generert: \t"
+                  + "{:.6f}".format(d_key_random) + "\t"
+                  + "{:.6f}".format(y_key_random) + "\t"
+                  + "{:.6f}".format(s_key_random) + "\t"
+                  + "{:.6f}".format(t_key_random) + "\t"
                   )
+
+            #logs to txt:
+            file = open("generated_numbers.txt", "a")
+            file.write("delay generert: \t"
+                  + "{:.6f}".format(first_of_three) + "\t"
+                  + "{:.6f}".format(second_of_three) + "\t"
+                  + "{:.6f}".format(third_of_three) + "\t"
+                  + "\t\t keystroke generert: \t"
+                  + "{:.6f}".format(d_key_random) + "\t"
+                  + "{:.6f}".format(y_key_random) + "\t"
+                  + "{:.6f}".format(s_key_random) + "\t"
+                  + "{:.6f}".format(t_key_random) + "\t"
+                )
+            file.close()
+
             i+=1
 
     except KeyboardInterrupt:
