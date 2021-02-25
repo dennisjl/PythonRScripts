@@ -12,7 +12,7 @@ def auto_aggro(number_of_hours):
           '\n\t\t\t\thave "keyboard" installed via pip ("pip install keyboard")'
           '\n\t\t\t\thave targetcycle set to the "|" key in combat settings '
           '\n\t\t\t\thave chain set to "y" key\n')
-    print("program to start in 2 seconds. Press y to start")
+    print("program to start in 2 seconds. Press p to start")
 
     time.sleep(2)
     keyboard.wait("p")      #press p to start
