@@ -5,8 +5,12 @@ import random
 def auto_aggro(number_of_hours):
     # 3600s i en time. sleep(10) ==> 360 = 1 time
     # endret til sleep(5) * 3 ==> 15s. 3600/15 = 240
+    """
     number_of_cycles = number_of_hours*240
     i = 0
+    """
+    current_time = time.time()
+    stop_at = current_time + number_of_hours * 60 * 60
 
     print('\n\n ----pre-reqs: '
           '\n\t\t\t\thave "keyboard" installed via pip ("pip install keyboard")'
@@ -18,7 +22,7 @@ def auto_aggro(number_of_hours):
     keyboard.wait("p")      #press p to start
 
     try:
-        while i < number_of_cycles:
+        while time.time() < stop_at:
             #the random generated numbers:
             d_key_random = random.uniform(0.2, 0.4)
             y_key_random = random.uniform(0.2, 0.4)
@@ -85,13 +89,12 @@ def auto_aggro(number_of_hours):
                 )
             file.close()
 
-            i+=1
 
     except KeyboardInterrupt:
         print("Program exited with CTRL+C")
         pass
 
-    print("process finished after" + number_of_cycles + "times. This ran for" + number_of_hours + "hours")
+    print("process finished after" + "times. This ran for" + number_of_hours + "hours")
 
 
 # Press the green button in the gutter to run the script.

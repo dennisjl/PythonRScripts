@@ -28,9 +28,10 @@ def superglassmake(hours):
     keyboard.wait("p")
 
     current_time = time.time()
+    stop_at = current_time + hours * 60 * 60
 
     try:
-        while current_time < current_time + run_for_x_hours:
+        while time.time() < stop_at:
 
             random_mouse_click = random.uniform(0.2, 0.4)
             random_bank_open_delay = random.uniform(0.9, 1.2)
