@@ -104,20 +104,20 @@ def sectionEFromSouth():
     # 23 herby wall
     pyautogui.moveTo(random.uniform(567, 629), random.uniform(495, 515), 0.3)
     pyautogui.click(interval=random.uniform(0.2, 0.4))
-    time.sleep(random.uniform(6, 6.2))
+    time.sleep(random.uniform(8.5, 8.7))
 
     # 22 herby wall
     pyautogui.moveTo(random.uniform(745, 793), random.uniform(502, 531), 0.3)
     pyautogui.click(interval=random.uniform(0.2, 0.4))
-    time.sleep(random.uniform(8, 8.2))
+    time.sleep(random.uniform(7.5, 7.7))
 
     # 21 off the herby wall: //something weird happens here     #TODO: look at this.
     #pyautogui.moveTo(random.uniform(665, 686), random.uniform(547, 561), 0.3)
     pyautogui.moveTo(665, 547, 0.3)
     pyautogui.click(interval=random.uniform(0.2, 0.4))
-    pyautogui.click(interval=random.uniform(0.2, 0.4))
-    #time.sleep(random.uniform(5.2, 5.4))
-    time.sleep((random.uniform(6.2, 6.4)))
+    #pyautogui.click(interval=random.uniform(0.2, 0.4))
+    time.sleep(random.uniform(5.2, 5.4))
+    #time.sleep((random.uniform(6.2, 6.4)))
 
     # 20 climb the start wall:
     pyautogui.moveTo(random.uniform(605, 647), random.uniform(151, 191), 0.2)
