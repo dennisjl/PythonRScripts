@@ -6,6 +6,7 @@ import pyautogui
 import random
 
 #Defaultzoom = 12 zoomsm, bekreftet 12. aug
+#Defaultzoom asuspc = 8 zooms, bekreftet natt 13/morgen 14.
 
 random_click_delay = random.uniform(0.2, 0.4)
 
@@ -35,9 +36,11 @@ def trap_then_move():
 
 def move_to_start():
     #random_x_interval = random.uniform(1410, 1432)
-    random_x_interval = 1417
+    ##random_x_interval = 1417
+    random_x_interval = random.uniform(1416, 1417)
     #random_y_interval = random.uniform(531, 548)
-    random_y_interval = 540
+    ##random_y_interval = 540
+    random_y_interval = random.uniform(540, 541)
     random_mouse_movement_speed = random.uniform(0.3, 0.8)
 
     pyautogui.moveTo(random_x_interval, random_y_interval, random_mouse_movement_speed)
