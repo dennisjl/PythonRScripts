@@ -6,8 +6,10 @@ import pyautogui
 import random
 
 #Defaultzoom = 19 from max zoom
+#Default for lenovo: 25 zooms fra max in
 
 random_click_delay = random.uniform(0.2, 0.4)
+random_m_click_and_release = random.uniform(0.2, 0.4)
 
 def compass_calibration_north_up():
     pyautogui.moveTo(1540, 40, 1)  # placement of the compass on a 1920 x 1080 display
@@ -48,36 +50,49 @@ def move_to_char():
     pyautogui.click(interval=random.uniform(0.2, 0.4))
     time.sleep(random.uniform(3, 4))
 
+def lootpress():
+    keyboard.press(",")
+    time.sleep(random_m_click_and_release)
+    keyboard.release(",")
+    keyboard.press("SPACE")
+    time.sleep(random_m_click_and_release)
+    keyboard.release("SPACE")
+
 def repeat_sequence():
 
     trap_then_move()
     time.sleep(random.uniform(1, 1.5))
     move_to_char()
     #time.sleep(random.uniform(1, 1.5))
-
-
-    trap_then_move()
-    time.sleep(random.uniform(1, 1.5))
-    pyautogui.click(interval=random.uniform(0.2, 0.4))
-    time.sleep(random.uniform(1, 1.5))
+    lootpress()
 
     trap_then_move()
     time.sleep(random.uniform(1, 1.5))
     pyautogui.click(interval=random.uniform(0.2, 0.4))
     time.sleep(random.uniform(1, 1.5))
+    lootpress()
+
+    trap_then_move()
+    time.sleep(random.uniform(1, 1.5))
+    pyautogui.click(interval=random.uniform(0.2, 0.4))
+    time.sleep(random.uniform(1, 1.5))
+    lootpress()
 
     trap_then_move()
     time.sleep(random.uniform(1.5, 2))
     pyautogui.click(interval=random.uniform(0.2, 0.4))
     time.sleep(random.uniform(1, 1.5))
+    lootpress()
 
     trap_then_move()
     time.sleep(random.uniform(1.5, 2))
     pyautogui.click(interval=random.uniform(0.2, 0.4))
     time.sleep(random.uniform(1, 1.5))
+    lootpress()
 
     trap_then_move()
     time.sleep(random.uniform(1.5, 2))
+    lootpress()
 
 
 def init_trap():
@@ -95,7 +110,7 @@ def boxtrap(hours):
     print(time.time())
     print('\n\n ----pre-reqs: '
           '\n\t\t\t\thave "keyboard", "pyautogui", "random" and "timey" installed via pip ("pip install keyboard")'
-          '\n\t\t\t\thave boxtrap on "m", zoom 19 scrolls from max zoomin\n')
+          '\n\t\t\t\thave boxtrap on "m", zoom 19/26 scrolls from max zoomin\n')
     print("program to start in immediately. Press space to start")
 
     keyboard.wait("SPACE")
@@ -115,4 +130,5 @@ def boxtrap(hours):
         pass
 
 if __name__ == "__main__":
-    boxtrap(1)
+    #boxtrap(1)
+    boxtrap(4)
