@@ -84,8 +84,8 @@ def first_fish_spot_after_bank():
 def second_fish_spot():
     #Coordinates for rightmost fishspot
     #947    498
-    x = random.uniform(946, 948)
-    y = random.uniform(497, 499)
+    x = random.uniform(946, 947)
+    y = random.uniform(497, 498)
     
     pyautogui.moveTo(x, y, 1)
     pyautogui.click(interval=random.uniform(0.2, 0.4))
