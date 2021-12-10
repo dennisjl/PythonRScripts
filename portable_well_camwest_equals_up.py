@@ -46,8 +46,8 @@ def click_pw():
     
     #BANK RIGHT = NORTH
     #WELL LEFT = SOUTH
-    #random_x_interval = random.uniform(321, 448)
-    #random_y_interval = random.uniform(483, 550)
+    random_x_interval = random.uniform(321, 448)
+    random_y_interval = random.uniform(483, 550)
 
     #BANK RIGHT = NORTH
     #WELL DIRECTLY UNDER CHAR
@@ -56,8 +56,8 @@ def click_pw():
 
     #BANK RIGHT = NORTH
     #WELL UP = TO THE WEST
-    random_x_interval = random.uniform(929, 1011)
-    random_y_interval = random.uniform(42, 86)
+    ##random_x_interval = random.uniform(929, 1011)
+    ##random_y_interval = random.uniform(42, 86)
 
     pyautogui.moveTo(random_x_interval, random_y_interval, 1)
     pyautogui.doubleClick(interval=random.uniform(0.2, 0.4))
@@ -98,4 +98,4 @@ def con(hours):
         pass
 
 if __name__ == "__main__":
-    con(0.75)    
+    con(1)    
