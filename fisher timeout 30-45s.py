@@ -48,5 +48,8 @@ def smith_corrupted_pre(hours):
 
 
 if __name__ == "__main__":
-    smith_corrupted_pre(4);
-    #smith_corrupted_pre(1);
+    #smith_corrupted_pre(2);
+    #smith_corrupted_pre(2);
+    smith_corrupted_pre(1);
+    #smith_corrupted_pre(0.9);
+    #smith_corrupted_pre(1.6);
