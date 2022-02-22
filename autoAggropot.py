@@ -64,6 +64,16 @@ def auto_aggro(number_of_hours):
 
             time.sleep(third_of_three)
 
+            #looting
+            keyboard.press(",")
+            time.sleep(d_key_random)
+            keyboard.release(",")
+
+            keyboard.press("SPACE")
+            time.sleep(d_key_random)
+            keyboard.release("SPACE")
+
+
             print("delay generert: \t"
                   + "{:.6f}".format(first_of_three) + "\t"
                   + "{:.6f}".format(second_of_three) + "\t"
@@ -99,6 +109,6 @@ def auto_aggro(number_of_hours):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    auto_aggro(3)
+    auto_aggro(4)
 
 
